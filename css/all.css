@@ -95,14 +95,21 @@ img{
     font-weight: bolder;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     padding-bottom: 25px;
 }
+.slider_section{
+    position: relative;
+}
 .slogan{
     z-index: 10;
-    font-size: 4em;
+    font-size: 3em;
     position: absolute;
     top: 40%;
     right: 15%;
     color: #fff;
     text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+}
+.style{
+    top: 50%;
+    right: 10%;
 }
 
 .theme-default #slider {
@@ -260,9 +267,6 @@ img{
     .menu li{
         margin-left: 20px;
     }
-    .slogan{
-        font-size: 3em;
-    }
     .theme-default #slider {
         margin: 60px auto 0 auto;
         width: 100%;
@@ -304,6 +308,9 @@ img{
         height: 50px;
     }
     .nivoSlider, .menu{
+        display: none;
+    }
+    .slogan{
         display: none;
     }
     .logo{
