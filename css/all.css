@@ -90,10 +90,10 @@ img{
     color: gray;
 }
 .menu li a:hover{
-    color: lightsalmon;
-    /* border-bottom: 5px solid lightsalmon; */
+    color: #c70213;
+    border-top: 5px solid #c70213;
     font-weight: bolder;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-    padding-bottom: 25px;
+    padding-top: 25px;
 }
 .slider_section{
     position: relative;
@@ -127,7 +127,7 @@ img{
 .product_name{
     font-size: 250%;
     font-weight: bold;
-    color: lightsalmon;
+    color: #c70213;
     position: absolute;
     top: -40px;
 }
@@ -194,35 +194,35 @@ img{
     font-size: 1em;
     text-decoration: none;
     color: #fff;
-    background-color: lightsalmon;
+    background-color: #c70213;
     border-radius: 4px;
     transition: all 0.7s;
 }
 .door_lock_info:hover{
-    color: lightsalmon;
-    border: 1px solid lightsalmon;    
+    color: #c70213;
+    border: 1px solid #c70213;    
     background-color: #fff;
 }
 .face_107_info:hover{
-    color: lightsalmon;
-    border: 1px solid lightsalmon;
+    color: #c70213;
+    border: 1px solid #c70213;
     background-color: #fff;    
 }
 .iaeris1_info:hover{
-    color: lightsalmon;
-    border: 1px solid lightsalmon;    
+    color: #c70213;
+    border: 1px solid #c70213;    
     background-color: #fff;        
 }
 .iaeris2_info:hover{
-    color: lightsalmon;
-    border: 1px solid lightsalmon;    
+    color: #c70213;
+    border: 1px solid #c70213;    
     background-color: #fff;        
 }
 .contact{
     width: 1000px;
     height: 300px;
     position: relative;
-    background: lightsalmon;
+    background: #c70213;
 }
 .contact_info ul{
     float: right;
