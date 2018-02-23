@@ -202,6 +202,9 @@ img{
     border-radius: 4px;
     transition: all 0.7s;
 }
+.door_lock_info_hide, .face_107_info_hide, .iaeris1_info_hide, .iaeris2_info_hide{
+    display: none;
+}
 .door_lock_info:hover{
     color: #c70213;
     border: 1px solid #c70213;    
