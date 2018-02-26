@@ -112,7 +112,8 @@ img{
     top: 40%;
     right: 15%;
     color: #fff;
-    text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000;
+    /* text-shadow: 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000, 0 0 10px #000; */
+    text-shadow: 1px 1px 40px rgba(22, 23, 31, 0.4);
 }
 .style{
     top: 51%;
