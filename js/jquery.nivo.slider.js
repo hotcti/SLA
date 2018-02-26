@@ -127,68 +127,68 @@
         }
 
         //Add Direction nav
-        // if(settings.directionNav){
-        //     slider.append('<div class="nivo-directionNav"><a class="nivo-prevNav">'+ settings.prevText +'</a><a class="nivo-nextNav">'+ settings.nextText +'</a></div>');
+        if(settings.directionNav){
+            slider.append('<div class="nivo-directionNav"><a class="nivo-prevNav">'+ settings.prevText +'</a><a class="nivo-nextNav">'+ settings.nextText +'</a></div>');
             
-        //     //Hide Direction nav
-        //     if(settings.directionNavHide){
-        //         $('.nivo-directionNav', slider).hide();
-        //         slider.hover(function(){
-        //             $('.nivo-directionNav', slider).show();
-        //         }, function(){
-        //             $('.nivo-directionNav', slider).hide();
-        //         });
-        //     }
+            //Hide Direction nav
+            if(settings.directionNavHide){
+                $('.nivo-directionNav', slider).hide();
+                slider.hover(function(){
+                    $('.nivo-directionNav', slider).show();
+                }, function(){
+                    $('.nivo-directionNav', slider).hide();
+                });
+            }
             
-        //     $('a.nivo-prevNav', slider).live('click', function(){
-        //         if(vars.running) return false;
-        //         clearInterval(timer);
-        //         timer = '';
-        //         vars.currentSlide -= 2;
-        //         nivoRun(slider, kids, settings, 'prev');
-        //     });
+            $('a.nivo-prevNav', slider).live('click', function(){
+                if(vars.running) return false;
+                clearInterval(timer);
+                timer = '';
+                vars.currentSlide -= 2;
+                nivoRun(slider, kids, settings, 'prev');
+            });
             
-        //     $('a.nivo-nextNav', slider).live('click', function(){
-        //         if(vars.running) return false;
-        //         clearInterval(timer);
-        //         timer = '';
-        //         nivoRun(slider, kids, settings, 'next');
-        //     });
-        // }
+            $('a.nivo-nextNav', slider).live('click', function(){
+                if(vars.running) return false;
+                clearInterval(timer);
+                timer = '';
+                nivoRun(slider, kids, settings, 'next');
+            });
+        }
         
         //Add Control nav
-        // if(settings.controlNav){
-        //     var nivoControl = $('<div class="nivo-controlNav"></div>');
-        //     slider.append(nivoControl);
-        //     for(var i = 0; i < kids.length; i++){
-        //         if(settings.controlNavThumbs){
-        //             var child = kids.eq(i);
-        //             if(!child.is('img')){
-        //                 child = child.find('img:first');
-        //             }
-        //             if (settings.controlNavThumbsFromRel) {
-        //                 nivoControl.append('<a class="nivo-control" rel="'+ i +'"><img src="'+ child.attr('rel') + '" alt="" /></a>');
-        //             } else {
-        //                 nivoControl.append('<a class="nivo-control" rel="'+ i +'"><img src="'+ child.attr('src').replace(settings.controlNavThumbsSearch, settings.controlNavThumbsReplace) +'" alt="" /></a>');
-        //             }
-        //         } else {
-        //             nivoControl.append('<a class="nivo-control" rel="'+ i +'">'+ (i + 1) +'</a>');
-        //         }
+        if(settings.controlNav){
+            var nivoControl = $('<div class="nivo-controlNav"></div>');
+            slider.append(nivoControl);
+            for(var i = 0; i < kids.length; i++){
+                if(settings.controlNavThumbs){
+                    var child = kids.eq(i);
+                    if(!child.is('img')){
+                        child = child.find('img:first');
+                    }
+                    if (settings.controlNavThumbsFromRel) {
+                        nivoControl.append('<a class="nivo-control" rel="'+ i +'"><img src="'+ child.attr('rel') + '" alt="" /></a>');
+                    } else {
+                        nivoControl.append('<a class="nivo-control" rel="'+ i +'"><img src="'+ child.attr('src').replace(settings.controlNavThumbsSearch, settings.controlNavThumbsReplace) +'" alt="" /></a>');
+                    }
+                } else {
+                    nivoControl.append('<a class="nivo-control" rel="'+ i +'">'+ (i + 1) +'</a>');
+                }
                 
-        //     }
-        //     //Set initial active link
-        //     $('.nivo-controlNav a:eq('+ vars.currentSlide +')', slider).addClass('active');
+            }
+            //Set initial active link
+            $('.nivo-controlNav a:eq('+ vars.currentSlide +')', slider).addClass('active');
             
-        //     $('.nivo-controlNav a', slider).live('click', function(){
-        //         if(vars.running) return false;
-        //         if($(this).hasClass('active')) return false;
-        //         clearInterval(timer);
-        //         timer = '';
-        //         slider.css('background','url("'+ vars.currentImage.attr('src') +'") no-repeat');
-        //         vars.currentSlide = $(this).attr('rel') - 1;
-        //         nivoRun(slider, kids, settings, 'control');
-        //     });
-        // }
+            $('.nivo-controlNav a', slider).live('click', function(){
+                if(vars.running) return false;
+                if($(this).hasClass('active')) return false;
+                clearInterval(timer);
+                timer = '';
+                slider.css('background','url("'+ vars.currentImage.attr('src') +'") no-repeat');
+                vars.currentSlide = $(this).attr('rel') - 1;
+                nivoRun(slider, kids, settings, 'control');
+            });
+        }
         
         //Keyboard Navigation
         if(settings.keyboardNav){
@@ -668,15 +668,15 @@
 		animSpeed: 500,
 		pauseTime: 3000,
 		startSlide: 0,
-		directionNav: true,
+		directionNav: false,
 		directionNavHide: true,
-		controlNav: true,
+		controlNav: false,
 		controlNavThumbs: false,
         controlNavThumbsFromRel: false,
 		controlNavThumbsSearch: '.jpg',
 		controlNavThumbsReplace: '_thumb.jpg',
 		keyboardNav: true,
-		pauseOnHover: true,
+		pauseOnHover: false,
 		manualAdvance: false,
 		captionOpacity: 0.8,
 		prevText: 'Prev',
